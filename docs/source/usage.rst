@@ -28,10 +28,10 @@ prefer. This guide will use the OpenSSH client built into Windows 10/11*
 
   $ ssh-keygen
 
-   *You can see your newly created key by executing ``cat ~/.ssh/id_rsa.pub`` in a local terminal*
+*You can see your newly created key by executing ``cat ~/.ssh/id_rsa.pub`` in a local terminal*
 
 #. Open/Create ``C:\Users\<User>\.ssh\config`` in any text editor. Add the following contents
-  
+ 
   .. code-block::console
   
    Host *
