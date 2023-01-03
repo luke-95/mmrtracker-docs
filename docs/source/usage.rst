@@ -16,7 +16,7 @@ prefer. This guide will use the OpenSSH client built into Windows 10/11*
 
 #. Execute
   
-  .. code-block::console
+  .. code-block:: console
 
   $ Set-Service ssh-agent -StartupType Automatic
   $ Start-Service ssh-agent
@@ -24,7 +24,7 @@ prefer. This guide will use the OpenSSH client built into Windows 10/11*
 
 #. Generate an ``ssh`` key (no need to change default prompts)
 
-  .. code-block::console
+  .. code-block:: console
 
   $ ssh-keygen
 
@@ -32,7 +32,7 @@ prefer. This guide will use the OpenSSH client built into Windows 10/11*
 
 #. Open/Create ``C:\Users\<User>\.ssh\config`` in any text editor. Add the following contents
  
-  .. code-block::console
+  .. code-block:: console
   
    Host *
    AddKeysToAgent yes
@@ -40,7 +40,7 @@ prefer. This guide will use the OpenSSH client built into Windows 10/11*
 
 #. Add the GitHub server public SSH host keys to your computer:
   
-  .. code-block::console
+  .. code-block:: console
  
   $ ssh-keyscan github.com >> ~/.ssh/known_hosts
 
@@ -57,7 +57,7 @@ prefer. This guide will use the OpenSSH client built into Windows 10/11*
 1. Open the windows Environment Variables editor
 2. Add the following to the ``User`` section, by clicking the ``[New...]`` button:
   
-  .. code-block::console
+  .. code-block:: console
    
   GITHUB_ACTOR="your-github-username"
   GITHUB_TOKEN="your-github-token"
@@ -68,7 +68,7 @@ prefer. This guide will use the OpenSSH client built into Windows 10/11*
 1. Make sure your environment variables are usable. If ``echo %GITHUB_ACTOR%`` doesn't output your environment variable value, restart your computer.
 2. Login by running:
 
-  .. code-block::console
+  .. code-block:: console
    
   echo %GITHUB_TOKEN% | docker login ghcr.io -u %GITHUB_ACTOR% --password-stdin
 

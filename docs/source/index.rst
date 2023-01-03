@@ -1,5 +1,5 @@
 Welcome to MMRTracker's documentation!
-===================================
+=======================================
 
 **MMRTracker** is a small website dedicated to tracking the Dota 2 MMR (ELO) progress for a player.
 
