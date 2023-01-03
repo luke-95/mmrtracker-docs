@@ -35,8 +35,8 @@ prefer. This guide will use the OpenSSH client built into Windows 10/11*
     .. code-block:: text
    
       Host *
-      AddKeysToAgent yes
-      IdentityFile ~/.ssh/id_rsa
+          AddKeysToAgent yes
+          IdentityFile ~/.ssh/id_rsa
 
 #. Add the GitHub server public SSH host keys to your computer:
   
