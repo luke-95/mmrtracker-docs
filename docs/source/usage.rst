@@ -1,12 +1,12 @@
 Usage
 =====
 
-.. _installation:
+.. _setup:
 
-Installation
+System Setup
 ------------
 
-To use Lumache, first install it using pip:
+To use MMRTracker you need to setup three things: SSH access, Docker and VSCode.
 
 .. code-block:: console
 
