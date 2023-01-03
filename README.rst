@@ -4,6 +4,6 @@ Template for the Read the Docs tutorial
 This GitHub template includes fictional Python library
 with some basic Sphinx docs.
 
-Read the tutorial here:
+Read the wiki here:
 
-https://docs.readthedocs.io/en/stable/tutorial/
+https://mmrtracker-docs.readthedocs.io/en/latest/index.html
