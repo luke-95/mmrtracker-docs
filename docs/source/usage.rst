@@ -46,16 +46,13 @@ prefer. This guide will use the OpenSSH client built into Windows 10/11*
 
 **Configure GitHub keys and tokens**
 
-1. Login into GitHub, then go to the `SSH settings`_ page and add your key
-2. Create a GitHub personal access token here_ with ``repo``, ``workflow``, ``write:packages`` and ``delete:packages`` permissions
-
-.. _SSH settings: https://github.com/settings/ssh/new\
-.. _here: https://github.com/settings/tokens/new
+#. Login into GitHub, then go to the `SSH settings <https://github.com/settings/ssh/new>`_ page and add your key
+#. Create a GitHub personal access token `here <https://github.com/settings/tokens/new>`_ with ``repo``, ``workflow``, ``write:packages`` and ``delete:packages`` permissions
 
 **Setup environment variables**
 
-1. Open the windows Environment Variables editor
-2. Add the following to the ``User`` section, by clicking the ``[New...]`` button:
+#. Open the windows Environment Variables editor
+#. Add the following to the ``User`` section, by clicking the ``[New...]`` button:
   
   .. code-block:: text
    
@@ -65,8 +62,8 @@ prefer. This guide will use the OpenSSH client built into Windows 10/11*
 
 **Login into GitHub Container Registry (GHCR)**
 
-1. Make sure your environment variables are usable. If ``echo %GITHUB_ACTOR%`` doesn't output your environment variable value, restart your computer.
-2. Login by running:
+#. Make sure your environment variables are usable. If ``echo %GITHUB_ACTOR%`` doesn't output your environment variable value, restart your computer.
+#. Login by running:
 
   .. code-block:: console
    
@@ -76,9 +73,42 @@ prefer. This guide will use the OpenSSH client built into Windows 10/11*
 .. _docker-setup:
 
 Docker setup
-----------------
+------------
+
+#. Install `Docker Desktop <https://www.docker.com/products/docker-desktop/>`_
+   
+   * Use WSL 2 (recommended) when prompted
+
+:: _Docker Desktop:
+
+#. Start Docker
+   
+   * Might need to install some WSL 2 prerequisites to get it working. See `this guide <https://learn.microsoft.com/ro-ro/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package>`_.
+  
+#. Check docker is working, by opening a new terminal window and running
+
+  .. code-block:: console
+    
+    docker --version
+    # Docker version 18.09.2, build 6247962
+
+#. Download the container
+
+  .. code-block:: console
+    
+    docker pull ghcr.io/luke-95/mmrtracker:latest
+
+#. Create a shared docker volume
+
+  .. code-block:: console
+    
+    docker volume create mmrtracker-state
+
+
 
 .. _vscode-setup:
 
 VSCode setup
 ----------------
+
+*TBD*
