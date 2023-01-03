@@ -12,21 +12,21 @@ prefer. This guide will use the OpenSSH client built into Windows 10/11*
 
 #. Open an admin Powershell terminal as administrator
 
-  - Right-click the Start/Windows button and select ``Windows PowerShell (Admin)``
+   * Right-click the Start/Windows button and select ``Windows PowerShell (Admin)``
 
 #. Execute
   
   .. code-block:: console
-    
+
     $ Set-Service ssh-agent -StartupType Automatic
     $ Start-Service ssh-agent
     $ Get-Service ssh-agent
 
 #. Generate an ``ssh`` key (no need to change default prompts)
 
-   .. code-block:: console
-    
-      $ ssh-keygen
+  .. code-block:: console
+
+    $ ssh-keygen
 
 *You can see your newly created key by executing ``cat ~/.ssh/id_rsa.pub`` in a local terminal*
 
@@ -42,7 +42,7 @@ prefer. This guide will use the OpenSSH client built into Windows 10/11*
   
   .. code-block:: console
  
-  $ ssh-keyscan github.com >> ~/.ssh/known_hosts
+    $ ssh-keyscan github.com >> ~/.ssh/known_hosts
 
 **Configure GitHub keys and tokens**
 
@@ -59,8 +59,8 @@ prefer. This guide will use the OpenSSH client built into Windows 10/11*
   
   .. code-block:: text
    
-  GITHUB_ACTOR="your-github-username"
-  GITHUB_TOKEN="your-github-token"
+    GITHUB_ACTOR="your-github-username"
+    GITHUB_TOKEN="your-github-token"
 
 
 **Login into GitHub Container Registry (GHCR)**
@@ -70,7 +70,7 @@ prefer. This guide will use the OpenSSH client built into Windows 10/11*
 
   .. code-block:: console
    
-  echo %GITHUB_TOKEN% | docker login ghcr.io -u %GITHUB_ACTOR% --password-stdin
+    echo %GITHUB_TOKEN% | docker login ghcr.io -u %GITHUB_ACTOR% --password-stdin
 
 
 .. _docker-setup:
