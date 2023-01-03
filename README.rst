@@ -1,9 +1,7 @@
-Template for the Read the Docs tutorial
+MMRTracker docs repository
 =======================================
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
+This GitHub repository holds the documentation files for the [MMRTracker](https://github.com/ErkanFRT/MMRTracker) project.
 
-Read the wiki here:
-
+Read them here:
 https://mmrtracker-docs.readthedocs.io/en/latest/index.html
