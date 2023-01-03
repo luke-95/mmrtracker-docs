@@ -17,26 +17,26 @@ prefer. This guide will use the OpenSSH client built into Windows 10/11*
 #. Execute
   
   .. code-block:: console
-
-  $ Set-Service ssh-agent -StartupType Automatic
-  $ Start-Service ssh-agent
-  $ Get-Service ssh-agent
+    
+    $ Set-Service ssh-agent -StartupType Automatic
+    $ Start-Service ssh-agent
+    $ Get-Service ssh-agent
 
 #. Generate an ``ssh`` key (no need to change default prompts)
 
-  .. code-block:: console
-
-  $ ssh-keygen
+   .. code-block:: console
+    
+      $ ssh-keygen
 
 *You can see your newly created key by executing ``cat ~/.ssh/id_rsa.pub`` in a local terminal*
 
 #. Open/Create ``C:\Users\<User>\.ssh\config`` in any text editor. Add the following contents
  
-  .. code-block:: console
-  
-   Host *
-   AddKeysToAgent yes
-   IdentityFile ~/.ssh/id_rsa
+  .. code-block:: text
+   
+    Host *
+    AddKeysToAgent yes
+    IdentityFile ~/.ssh/id_rsa
 
 #. Add the GitHub server public SSH host keys to your computer:
   
@@ -57,7 +57,7 @@ prefer. This guide will use the OpenSSH client built into Windows 10/11*
 1. Open the windows Environment Variables editor
 2. Add the following to the ``User`` section, by clicking the ``[New...]`` button:
   
-  .. code-block:: console
+  .. code-block:: text
    
   GITHUB_ACTOR="your-github-username"
   GITHUB_TOKEN="your-github-token"
